@@ -1,0 +1,40 @@
+{
+        "title": "RESPONSE GAME",
+        "majorVersion": 1,
+        "minorVersion": 0,
+        "patchVersion": 0,
+        "runnable": 1,
+        "machineName": "H5P.ResponseGame",
+        "author": "H5P-SPACE",
+        "license": "MIT",
+        "embedTypes": ["iframe"],
+        "preloadedDependencies":[
+                {
+                    "machineName":"H5P.JoubelUI",
+                    "majorVersion":1,
+                    "minorVersion":3
+                }
+         ],
+         "preloadedJs":[
+                {
+                  "path":"js/h5p-response-game.js"
+                }
+         ],
+         "preloadedCss":[
+                {
+                  "path":"css/h5p-response-game.css"
+                }
+         ],
+         "editorDependencies": [
+                {
+                  "machineName": "H5PEditor.RangeList",
+                  "majorVersion": 1,
+                  "minorVersion": 0
+                },
+                {
+                  "machineName": "H5PEditor.RadioGroup",
+                  "majorVersion": 1,
+                  "minorVersion": 1
+                }
+        ]
+}
