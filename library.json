@@ -1,0 +1,52 @@
+{
+  "title": "Response Game",
+  "description": "Test your users by making them select the correct words from a text.",
+  "machineName": "H5P.ResponseGame",
+  "majorVersion": 1,
+  "minorVersion": 1,
+  "patchVersion": 0,
+  "runnable": 1,
+  "embedTypes": [
+    "iframe"
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 3
+    },
+    {
+      "machineName": "H5P.Question",
+      "majorVersion": 1,
+      "minorVersion": 4
+    },
+    {
+      "machineName": "H5P.Timer",
+      "majorVersion": 0,
+      "minorVersion": 4
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "css/h5p-response-game.css"
+    }
+  ],
+  "preloadedJs": [
+    {
+      "path": "js/h5p-response-game.js"
+    },
+    {
+      "path": "js/h5p-response-game-shape.js"
+    },
+    {
+      "path": "js/h5p-response-game-timer.js"
+    }
+  ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.RadioGroup",
+      "majorVersion": 1,
+      "minorVersion": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "label" : "Description",
+    "name" : "description",
+    "type" : "text"
+  },
+  {
+    "name": "colors",
+    "type": "list",
+    "label": "Color List",
+    "description": "Colors that you want them to identify.",
+    "entity": "color",
+    "min": 3,
+    "max": 10,
+    "field": {
+      "name": "color",
+      "type": "text",
+      "widget": "html",
+      "label": "Color"
+    }
+  }
+]

@@ -1,0 +1,116 @@
+.h5p-response-game {
+  text-align: center;
+  align-content: center;
+  min-height: 560px;
+}
+
+.h5p-response-game .title-screen .lvl-select-txt {
+  margin-top: 12em;
+}
+.h5p-response-game .title-screen .btn-group {
+  /* display: table; */
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+.h5p-response-game .title-screen .btn-group .btn {
+  background-color: white; /* Green background */
+  border: 2px solid #007899; /* Green border */
+  color: #007899; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 10em;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.h5p-response-game .title-screen .btn-group .btn:hover {
+  background-color: #007899;
+  color: white;
+}
+
+.h5p-response-game .title-screen .btn-group .btn:focus {
+  background-color: #007899;
+  color: white;
+
+}
+
+.h5p-response-game .title-screen .btn-group .btn:not(:last-child) {
+  border-right: none;
+}
+.h5p-response-game .title-screen .btn-group .btn:first-child {
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+}
+
+.h5p-response-game .title-screen .btn-group .btn:last-child {
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.h5p-response-game .title-screen .start-button {
+  width: 12em;
+  background-color: goldenrod;
+  font-size: larger;
+  font-weight: 500;
+  color: revert;
+}
+
+.h5p-response-game .game-screen .top-div {
+  text-align: left;
+  padding: 1em 10em 0em;
+}
+.h5p-response-game .game-screen .top-div .score-div{
+  display: inline-block;
+}
+
+.h5p-response-game .game-screen .top-div .timer-div {
+  display: inline-block;
+  float: right;
+}
+.h5p-response-game .game-screen .shape-div {
+  /* text-align: center; */
+  position: relative;
+}
+
+.h5p-response-game .game-screen .shape-div canvas {
+  border-radius: .5em;
+  border:2px solid black;
+}
+.h5p-response-game .game-screen .shape-div .quest-progress {
+  background-color: lightgrey;
+  height: 10px;
+  left: 35.55%;
+  position: absolute;
+  top:0px;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+.h5p-response-game .game-screen .shape-div .quest-progress .progress {
+  height: 100%;
+  background-color: green;
+  width: 1%;
+  border-top-left-radius: .5em;
+  /* animation: 1s */
+  border-top-right-radius: .5em;
+}
+
+.h5p-response-game .game-screen .score-button {
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid lightgrey;
+    width: 6em;
+    height: 2em;
+    margin: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+}
