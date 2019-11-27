@@ -61,21 +61,67 @@
   color: revert;
 }
 
+.h5p-response-game .start-button:hover, .start-button:focus {
+  background-color: goldenrod;
+}
+
+.start-button:active {
+  position: relative;
+  background-color:goldenrod;
+
+  -webkit-box-shadow: inset 0 4px 0px goldenrod;
+  -moz-box-shadow: inset 0 4px 0px goldenrod;
+  box-shadow: inset 0 4px 0px goldenrod;
+}
+
 .h5p-response-game .game-screen .top-div {
   text-align: left;
-  padding: 1em 10em 0em;
+  padding: 1em 2em 0em;
 }
 .h5p-response-game .game-screen .top-div .score-div{
   display: inline-block;
+  color: cadetblue;
+  font-size: 0.9em;
 }
+
+.h5p-response-game .game-screen .top-div .score-div span{
+  display: block;
+  font-size: 1.5em;
+  color: black;
+}
+
 
 .h5p-response-game .game-screen .top-div .timer-div {
   display: inline-block;
   float: right;
 }
+.h5p-response-game .game-screen .top-div .timer-div .timer{
+  color: cadetblue;
+  font-size: 0.9em;
+
+}
+.h5p-response-game .game-screen .top-div .timer-div .timer span{
+  display: block;
+  font-size: 1.5em;
+  color: black;
+}
+.h5p-response-game .game-screen .top-div .timer-div .response-time {
+  margin-top: 1em;
+  color: cadetblue;
+  font-size: 0.9em;
+}
+.h5p-response-game .game-screen .top-div .timer-div .response-time span {
+  display: block;
+  font-size: 1.5em;
+  color: black;
+}
+.question-container .question{
+    margin-left: 10em;
+}
 .h5p-response-game .game-screen .shape-div {
   /* text-align: center; */
   position: relative;
+  margin-top: 2em;
 }
 
 .h5p-response-game .game-screen .shape-div canvas {
@@ -93,8 +139,8 @@
 }
 .h5p-response-game .game-screen .shape-div .quest-progress .progress {
   height: 100%;
-  background-color: green;
-  width: 1%;
+  background-color: #d7263d;
+  width: 100%;
   border-top-left-radius: .5em;
   /* animation: 1s */
   border-top-right-radius: .5em;
@@ -113,4 +159,176 @@
     margin: 1em;
     border-radius: .5em;
     cursor: pointer;
+}
+.h5p-response-game .game-screen .correct-answer {
+  background-color: green;
+  /* content: ''; */
+
+}
+.h5p-response-game .game-screen .incorrect-answer {
+  background-color: red;
+  /* content: ''; */
+}
+.h5p-response-game .game-screen .score-button:active {
+  box-shadow: 1px 1px 1px 1px;
+
+}
+
+.h5p-response-game .game-screen .progress-bar {
+  height: 10px;
+  width:1%;
+  background-color: #00b0b3;
+  margin-top: 3em;
+
+  background-size: 200% 100%;
+  background-position: 100%;
+  position: relative;
+}
+
+.h5p-response-game .message {
+  margin-top: 3em;
+  line-height: 2;
+}
+.h5p-response-game .result-div {
+  display: block;
+  /* width: 50%; */
+  margin-top: 3em;
+  /* margin-left: 25%; */
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.h5p-response-game .result-div .left-div {
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 1em 1em 1.5em 1em  ;
+  min-height: 8em;
+  width: 15em;
+}
+.h5p-response-game .result-div .left-div div {
+  margin-top: 1.5em;
+  color: cadetblue;
+  font-size: 0.9em;
+}
+
+.h5p-response-game .result-div .right-div {
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 1em;
+  min-height: 8em;
+  width: 15em;
+  float: right;
+  /* margin-right: 20%; */
+}
+
+.h5p-response-game .result-div .left-div .progress {
+  background-color: green;
+  height: 10px;
+}
+
+.response-progress {
+  margin-top:1.5em;
+  text-align: right;
+}
+
+
+.response-progress .progress-outbar {
+  background-color: lightgrey;
+  border-radius: 0.2em;
+}
+.response-progress .avg-time {
+  margin-right: 3em;
+  float: left;
+  font-size: 1.2em;
+  color: black;
+}
+.response-progress .feedback {
+  font-size: 1em;
+}
+.progress-outbar .progress{
+  height: 10px;
+  /* background: linear-gradient(to right,  #9c9e9f 0%,#9c9e9f 50%,#33ccff 50%,#33ccff 100%); */
+  border-radius: 0.2em;
+}
+
+.progress-green {
+    background-color: green;
+}
+.progress-orange {
+    background-color: #ffa241;
+}
+.progress-red {
+    background-color: red;
+}
+
+.h5p-response-game .time-spent{
+  color: cadetblue;
+  font-size: 0.9em;
+  margin-top:1em;
+}
+.h5p-response-game .time-spent span{
+  display: block;
+  font-size: 1.5em;
+  color: black;
+}
+
+.tooltip {
+  /* width: 15%; */
+  /* background-color: #555; */
+  display: inline-block;
+  border: 2px solid gold;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 155%;
+  /* left: 50%; */
+  /* margin-left: -7.5%; */
+}
+
+.h5p-joubelui-score-bar-progress {
+  /* background: #009699 !important; */
+  background: linear-gradient(to right,#00e2e6, #00b0b3) !important;
+}
+
+/* .tooltip::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 110%;
+  left: 50%;
+  margin-left: -5px;
+  background-color:#0059b3 ;
+} */
+
+.retry-button {
+  /* margin-left: 4em !important; */
+  margin-top: 2em !important;
+  background-color: #009699 !important;
+}
+
+.retry-button:hover, .retry-button:focus {
+  background-color: #009699 !important;
+}
+
+.retry-button:active {
+  background-color: #009699 !important;
+  box-shadow: unset !important;
+}
+
+
+@media screen and (min-width: 560px) {
+  .result-div .right-div {
+    margin-right: 7%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .result-div .right-div {
+    margin-right: 20%;
+  }
 }

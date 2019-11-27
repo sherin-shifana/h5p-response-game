@@ -1,19 +1,28 @@
 (function ($,ResponseGame,EventDispatcher) {
 
-  ResponseGame.Shape = function ( paramsObj) {
+  ResponseGame.Shape = function ( shape, level) {
 
     const that= this;
     EventDispatcher.call(this);
-
-    this.shape = paramsObj.shape;
-    this.color = paramsObj.color;
-    this.isAnswer = paramsObj.isAnswer;
+    // console.log(shape);
+    // console.log(shape.shape, shape.color);
+    this.shape = shape.shape;
+    this.color = shape.color;
+    this.isAnswer = shape.isAnswer;
 
     this.status = null;
 
-    this.timer = new ResponseGame.Timer();
+    // let calltime = (level === 'hard') ? '0.02' : '0.04';
+    // console.log(calltime);
+    this.timer = new ResponseGame.Timer(level);
 
-    this.timer.setClockTime('0:04');
+    if (level == 'hard') {
+      this.timer.setClockTime('0:02');
+    } else {
+      this.timer.setClockTime('0:04');
+    }
+
+    this.totalTime = this.timer.getTime();
     this.timer.setMode(H5P.Timer.BACKWARD);
 
 
@@ -91,7 +100,7 @@ ResponseGame.Shape.prototype.draw = function($canvas,$container){
       context.stroke();
       context.fill();
       context.closePath();
-      $container.find('.progress').css('width','100%');
+      $container.find('.progress').css('width','0%');
       $container.find('.progress').css('transition','width '+(that.timer.getTime()/1000)+'s' );
       that.timer.play();
 

@@ -10,8 +10,7 @@
     /** @alias H5P.ResponseGame.Timer# */
     const that = this;
     // Initialize event inheritance
-    console.log(element);
-    if (element) {
+    if (element instanceof Element) {
       Timer.call(that, 100);
 
       /**
@@ -58,60 +57,118 @@
       });
     }
     else {
-      Timer.call(that);
+      if (element === 'hard') {
+        Timer.call(that);
 
 
-      /** @private {string} */
-      const naturalState = '0:00';
+        /** @private {string} */
+        const naturalState = '0:00';
 
-      /**
-       * update - Set up callback for time updates.
-       * Formats time stamp for humans.
-       *
-       * @private
-       */
-      const update = function () {
-        const time = that.getTime();
+        /**
+         * update - Set up callback for time updates.
+         * Formats time stamp for humans.
+         *
+         * @private
+         */
+        const update = function () {
+          const time = that.getTime();
 
-        const minutes = Timer.extractTimeElement(time, 'minutes');
-        let seconds = Timer.extractTimeElement(time, 'seconds') % 60;
-        if (seconds < 10) {
-          seconds = '0' + seconds;
-        }
+          const minutes = Timer.extractTimeElement(time, 'minutes');
+          let seconds = Timer.extractTimeElement(time, 'seconds') % 60;
+          if (seconds < 10) {
+            seconds = '0' + seconds;
+          }
 
-        // console.log(time);
-        // $element.text(minutes + ':' + seconds);
-      };
-
-      that.notify({ "type": H5P.Timer.TYPE_PLAYING,
-       // "calltime": 10000,
-       "repeat": 1000,
-       "mode": H5P.Timer.NOTIFIY_RELATIVE
-      }, function() {
-         // console.log(that.getTime());
-         // console.log('triggering update');
-         // console.log(that.getStatus());
-        } );
-
+          // console.log(time);
+          // $element.text(minutes + ':' + seconds);
+        };
 
         that.notify({ "type": H5P.Timer.TYPE_PLAYING,
-         "calltime": "0:04",
+         // "calltime": 10000,
+         "repeat": 1000,
          "mode": H5P.Timer.NOTIFIY_RELATIVE
         }, function() {
            // console.log(that.getTime());
-           // console.log('End');
-           that.stop();
-           that.trigger('skipped');
+           // console.log('triggering update');
            // console.log(that.getStatus());
+        } );
+
+
+            that.notify({ "type": H5P.Timer.TYPE_PLAYING,
+             "calltime": "0:02",
+             "mode": H5P.Timer.NOTIFIY_RELATIVE
+            }, function() {
+               // console.log(that.getTime());
+               // console.log('End');
+               that.stop();
+               that.trigger('skipped');
+               // console.log(that.getStatus());
+              } );
+
+          // Setup default behavior
+          that.notify('every_tenth_second', update);
+          that.on('reset', function () {
+            $element.text(naturalState);
+            that.notify('every_tenth_second', update);
+          });
+        }
+        else {
+          Timer.call(that);
+
+
+          /** @private {string} */
+          const naturalState = '0:00';
+
+          /**
+           * update - Set up callback for time updates.
+           * Formats time stamp for humans.
+           *
+           * @private
+           */
+          const update = function () {
+            const time = that.getTime();
+
+            const minutes = Timer.extractTimeElement(time, 'minutes');
+            let seconds = Timer.extractTimeElement(time, 'seconds') % 60;
+            if (seconds < 10) {
+              seconds = '0' + seconds;
+            }
+
+            // console.log(time);
+            // $element.text(minutes + ':' + seconds);
+          };
+
+          that.notify({ "type": H5P.Timer.TYPE_PLAYING,
+           // "calltime": 10000,
+           "repeat": 1000,
+           "mode": H5P.Timer.NOTIFIY_RELATIVE
+          }, function() {
+             // console.log(that.getTime());
+             // console.log('triggering update');
+             // console.log(that.getStatus());
           } );
 
-      // Setup default behavior
-      that.notify('every_tenth_second', update);
-      that.on('reset', function () {
-        $element.text(naturalState);
-        that.notify('every_tenth_second', update);
-      });
-    }
+
+              that.notify({ "type": H5P.Timer.TYPE_PLAYING,
+               "calltime": "0:04",
+               "mode": H5P.Timer.NOTIFIY_RELATIVE
+              }, function() {
+                 // console.log(that.getTime());
+                 // console.log('End');
+                 that.stop();
+                 that.trigger('skipped');
+                 // console.log(that.getStatus());
+                } );
+
+            // Setup default behavior
+            that.notify('every_tenth_second', update);
+            that.on('reset', function () {
+              $element.text(naturalState);
+              that.notify('every_tenth_second', update);
+            });
+        }
+      }
+
   };
 
 

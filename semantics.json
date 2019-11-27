@@ -15,8 +15,31 @@
     "field": {
       "name": "color",
       "type": "text",
-      "widget": "html",
       "label": "Color"
     }
+  },
+  {
+    "name": "maxOptions",
+    "type": "number",
+    "label": "Maximum Options",
+    "description": "Enter the maximum number of entries."
+  },
+  {
+    "name": "maxAnswers",
+    "type": "number",
+    "label": "Maximum Answers",
+    "description": "Enter the maximum number of answers."
+  },
+  {
+    "name": "minAnswers",
+    "type": "number",
+    "label": "Minimum Answers",
+    "description": "Enter the minimum number of answers."
+  },
+  {
+    "name": "maxTime",
+    "type": "number",
+    "label": "Maximum Time",
+    "description": "Enter the maximum time to load next entry."
   }
 ]
