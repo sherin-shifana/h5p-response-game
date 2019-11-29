@@ -3,7 +3,7 @@
   "description": "Test your users by making them select the correct words from a text.",
   "machineName": "H5P.ResponseGame",
   "majorVersion": 1,
-  "minorVersion": 3,
+  "minorVersion": 4,
   "patchVersion": 0,
   "runnable": 1,
   "embedTypes": [
