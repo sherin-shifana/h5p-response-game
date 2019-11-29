@@ -5,7 +5,7 @@ H5P Response game is a content type that can be used to find the ability to iden
 
 ## Screenshots
 
-<img src="https://gitlab.com/icfoss/h5p-response-game/raw/master/screenshots/responsegame.jpg"/>
+<img src="https://gitlab.com/icfoss/h5p-response-game/raw/master/screenshots/responsegame.png"/>
 
 
 ## License
