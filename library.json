@@ -33,13 +33,13 @@
   ],
   "preloadedJs": [
     {
-      "path": "js/h5p-response-game.js"
+      "path": "scripts/h5p-response-game.js"
     },
     {
-      "path": "js/h5p-response-game-shape.js"
+      "path": "scripts/h5p-response-game-shape.js"
     },
     {
-      "path": "js/h5p-response-game-timer.js"
+      "path": "scripts/h5p-response-game-timer.js"
     }
   ],
   "editorDependencies": [
